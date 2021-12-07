@@ -1,0 +1,364 @@
+body {
+  font-family: "Acme", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  background-color: transparent;
+}
+
+nav {
+  display: flex;
+  font-family: Nunito;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: transparent;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.title-container {
+  padding: 50px 5px;
+}
+
+.title-button {
+  background-color: #f26b81;
+  border-bottom: 2px solid #e24a4f;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  font-size: 17px;
+  margin: 15px auto;
+  text-align: center;
+  transition: 0.4s ease-in-out;
+  width: 250px;
+  height: 40px;
+  position: relative;
+  bottom: 65px;
+}
+
+.title-button:hover {
+  background-color: #e00007;
+}
+
+.title-button-text {
+  padding: 10px;
+}
+
+/* MAIN BG IMAGE */
+/* A background image doesn't give any height to an element on its own, so we also use the `height` property to give this element a defined height */
+.title-main-photo {
+  align-items: center;
+  background-image: url("https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1567&q=80");
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  height: 800px;
+}
+
+.image-mask-darken {
+  position: relative;
+}
+
+.image-mask-darken:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  content: "";
+}
+
+.title-intro-content {
+  color: white;
+  position: absolute;
+  text-align: center;
+  width: 1000px;
+}
+
+.title-intro-title {
+  font-size: 120px;
+}
+
+.title-intro-subtitle {
+  font-size: 40px;
+  position: relative;
+  bottom: 80px;
+}
+
+@media (max-width: 500px) {
+  .title-main-photo {
+    background-image: url("https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1567&q=80");
+  }
+  .title-intro-content {
+    color: white;
+    position: absolute;
+    text-align: center;
+    width: 400px;
+  }
+  .title-intro-title {
+    font-size: 70px;
+    line-height: 63px;
+    position: relative;
+    bottom: 100px;
+  }
+  .title-intro-subtitle {
+    font-size: 25px;
+    position: relative;
+    bottom: 120px;
+  }
+}
+
+.question-title {
+  margin: auto;
+  text-align: center;
+  padding-top: 20px;
+  color: #6c6c6c;
+}
+
+.questions-6grid {
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  grid-template-rows: repeat(3, 350px);
+  grid-gap: repeat(50px 30px); /*50px between rows, 30 between cols */
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.questions-4grid {
+  display: grid;
+  grid-template-columns: repeat(2, 450px);
+  grid-template-rows: repeat(2, 350px);
+  grid-gap: repeat(50px 30px); /*50px between rows, 30 between cols */
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-item {
+  padding: 10px;
+  width: 300px;
+  height: 300px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.questions-4grid .grid-item {
+  width: 400px;
+}
+
+.grid-item:hover {
+  opacity: 0.65;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@media (max-width: 500px) {
+  .question-title {
+    font-size: 30px;
+  }
+  .questions-6grid {
+    display: grid;
+    grid-template-columns: repeat(2, 180px);
+    grid-template-rows: repeat(3, 180px);
+    grid-gap: repeat(20px 10px); /*50px between rows, 30 between cols */
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+  }
+  .questions-4grid {
+    display: grid;
+    grid-template-columns: repeat(2, 180px);
+    grid-template-rows: repeat(2, 180px);
+    grid-gap: repeat(20px 10px); /*50px between rows, 30 between cols */
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+  }
+  .grid-item {
+    padding: 10px;
+    width: 155px;
+    height: 155px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+  }
+
+  .questions-4grid .grid-item {
+    width: 160px;
+  }
+}
+
+.end-button {
+  background-color: #f26b81;
+  border-bottom: 2px solid #e24a4f;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  font-size: 50px;
+  margin: 25px auto;
+  text-align: center;
+  transition: 0.4s ease-in-out;
+  width: 450px;
+  height: 200px;
+  position: relative;
+  bottom: 50px;
+}
+
+.end-button:hover {
+  background-color: #e00007;
+}
+
+.end-button-text {
+  padding: 20px;
+  padding-top: 35px;
+}
+
+.end-main-photo {
+  align-items: center;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  height: 800px;
+}
+
+@media (max-width: 500px) {
+  .end-button {
+    background-color: #f26b81;
+    border-bottom: 2px solid #e24a4f;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    font-size: 50px;
+    margin: 25px auto;
+    text-align: center;
+    transition: 0.4s ease-in-out;
+    width: 280px;
+    height: 150px;
+    position: relative;
+    bottom: 85px;
+  }
+  .end-button-text {
+    padding: 20px;
+    padding-top: 27px;
+    font-size: 45px;
+  }
+}
+
+.mint {
+  background-image: url("https://images.unsplash.com/photo-1534706936160-d5ee67737249?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80");
+}
+
+.pB {
+  background-image: url("https://images.unsplash.com/photo-1625234969503-49c7f28bc6ec?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=664&q=80");
+}
+
+.coffee {
+  background-image: url("https://images.pexels.com/photos/2586924/pexels-photo-2586924.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+}
+
+.greenTea {
+  background-image: url("https://images.pexels.com/photos/4540356/pexels-photo-4540356.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+}
+
+.rSprink {
+  background-image: url("https://images.unsplash.com/photo-1560008581-09826d1de69e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80");
+}
+
+.cookieD {
+  background-image: url("https://images.unsplash.com/photo-1611945008429-3340e8c572f7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80");
+}
+
+.end-intro-content {
+  color: white;
+  position: absolute;
+  text-align: center;
+  width: 1000px;
+}
+
+.end-intro-title {
+  font-size: 100px;
+}
+
+.end-intro-subtitle {
+  font-size: 30px;
+  position: relative;
+  bottom: 80px;
+  line-height: 1.4;
+}
+
+.home-button {
+  background-color: #f26b81;
+  border-bottom: 2px solid #e24a4f;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  margin: 15px auto;
+  text-align: center;
+  padding-top: 10px;
+  transition: 0.4s ease-in-out;
+  width: 250px;
+  height: 20px;
+  position: absolute;
+  bottom: 150px;
+}
+
+@media (max-width: 500px) {
+  .end-intro-content {
+    color: white;
+    position: absolute;
+    text-align: center;
+    width: 400px;
+  }
+  .end-intro-title {
+    font-size: 70px;
+    line-height: 63px;
+    position: relative;
+    bottom: 49px;
+  }
+  .end-intro-subtitle {
+    font-size: 22px;
+    position: relative;
+    bottom: 140px;
+    padding: 30px;
+  }
+  .home-button {
+    width: 200px;
+    height: 20px;
+    position: absolute;
+    bottom: 170px;
+  }
+}
+
+/* .grid-item .itemLabel {
+  position: relative;
+  visibility: hidden;
+  text-align: center;
+  bottom: 200px;
+  text-decoration: none;
+  font-size: 30px;
+  color: black;
+}
+
+.grid-item:hover .itemLabel {
+  visibility: visible;
+} */
